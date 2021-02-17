@@ -1,0 +1,15 @@
+var today = new Date();
+const cmas = new Date(today.getFullYear(),11,25);
+
+if (today.getMonth() == 11 && today.getDate == 25){
+    console.log("It's Christmas!");
+}
+
+if (today.getMonth() == 11 && today.getDate > 25){
+    cmas.setFullYear(cmas.getFullYear() +1)
+}
+
+var oneDay = 24*60*60*1000;
+var daysTillCmas = Math.ceil((cmas.getTime()- today.getTime()) / oneDay);
+
+console.log(daysTillCmas + " Until Christmas");
